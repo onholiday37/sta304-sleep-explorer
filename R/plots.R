@@ -3,8 +3,8 @@ finish_plot <- function(p, x_title, y_title, x_range = NULL, y_range = NULL) {
     font = list(family = "Arial, sans-serif", color = "#334155", size = 12),
     paper_bgcolor = "#ffffff", plot_bgcolor = "#ffffff", showlegend = FALSE,
     margin = list(l = 65, r = 24, t = 24, b = 78),
-    xaxis = list(title = list(text = x_title, standoff = 16), range = x_range, gridcolor = "#edf0f3", zeroline = FALSE),
-    yaxis = list(title = list(text = y_title, standoff = 14), range = y_range, gridcolor = "#edf0f3", zeroline = FALSE),
+    xaxis = list(title = list(text = paste(strwrap(x_title, width = 32), collapse = "<br>"), standoff = 16), range = x_range, gridcolor = "#edf0f3", zeroline = FALSE),
+    yaxis = list(title = list(text = paste(strwrap(y_title, width = 32), collapse = "<br>"), standoff = 14), range = y_range, gridcolor = "#edf0f3", zeroline = FALSE),
     hoverlabel = list(bgcolor = "#152e3a", font = list(color = "white")), hovermode = "closest")
   plotly::config(p, displaylogo = FALSE, responsive = TRUE,
     modeBarButtonsToRemove = c("select2d", "lasso2d", "sendDataToCloud"))

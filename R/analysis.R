@@ -183,7 +183,7 @@ format_p <- function(x) if (!is.finite(x)) "unavailable" else if (x < .001) "< 0
 ci_text <- function(x, digits = 2) paste0("[", fmt(x[1], digits), ", ", fmt(x[2], digits), "]")
 
 regression_text <- function(s) {
-  if (!s$valid) return(paste0("There are ", s$n, " complete responses. A regression needs at least three responses and variation in both measures; a meaningful fit is unavailable for this subgroup."))
+  if (!s$valid) return(paste0("There are ", s$n, " complete responses. Regression inference needs at least three responses, variation in both measures and nonzero residual spread. These conditions are not met for this subgroup; only the observed points are shown."))
   paste0("For ", s$n, " responses, Pearson r = ", fmt(s$r), ", R-squared = ", fmt(s$r2, 3),
     ". The estimated slope is ", fmt(s$slope, 4), " hours of nightly sleep per extra study hour (95% conventional CI ",
     ci_text(s$ci, 4), ", p ", format_p(s$p), "). The HC3 interval allowing unequal error variance is ",
@@ -203,11 +203,13 @@ summary_table <- function(d) {
 }
 
 frequency_table <- function(d) {
+  labels <- c(assessment_type = "Assessment type", exam_recency = "Time since the exam",
+              other_exams_7d = "Other assessments in seven days")
   specs <- list(assessment_type = list(0:1, c("Test / midterm", "Final examination")),
     exam_recency = list(1:4, RECENCY_LABELS), other_exams_7d = list(0:5, c("0", "1", "2", "3", "4", "5 or more")))
   do.call(rbind, lapply(names(specs), function(key) {
     spec <- specs[[key]]; counts <- as.integer(table(factor(d[[key]], levels = spec[[1]])))
-    data.frame(Variable = key, Category = spec[[2]], Count = counts,
+    data.frame(Variable = unname(labels[key]), Category = spec[[2]], Count = counts,
       Percent = if (nrow(d)) 100 * counts / nrow(d) else NA_real_)
   }))
 }

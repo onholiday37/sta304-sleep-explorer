@@ -2291,10 +2291,10 @@
       "checksum": "bcc4044f843d2436b483ca41f9eb83dc"
     },
     "R/analysis.R": {
-      "checksum": "ec823148ebe0a1451b4d0e2c4f55a3b0"
+      "checksum": "562257b6056d95f8e867d6b8bec7a449"
     },
     "R/plots.R": {
-      "checksum": "1307093bf21b5bd5f93de81aeaed900d"
+      "checksum": "8ab3b8572ec50e8680353aa950d50913"
     },
     "R/server.R": {
       "checksum": "005f29f689bfd71cf1ba52c6ed123572"
@@ -2303,7 +2303,7 @@
       "checksum": "9eee4c98a29c4943d440b1f210f09708"
     },
     "www/styles.css": {
-      "checksum": "d5545ee072a6c86fae2bc70dd0534cb7"
+      "checksum": "ba83d8c797107f61f1ae88f52c7fd25d"
     }
   },
   "users": null
