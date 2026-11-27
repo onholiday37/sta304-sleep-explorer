@@ -2281,14 +2281,17 @@
     }
   },
   "files": {
+    ".gitattributes": {
+      "checksum": "9d89a40a8a6e0ee163f36e37d5a9b367"
+    },
     "app.R": {
       "checksum": "cee9400fa1840cfd7ee15cda5e2a4b17"
     },
     "data/analysis_data.csv": {
-      "checksum": "a9220b079a3ec93042fd49a0dfbd2202"
+      "checksum": "bcc4044f843d2436b483ca41f9eb83dc"
     },
     "R/analysis.R": {
-      "checksum": "ca7b4abef730d9cafff8ab06735c9b5c"
+      "checksum": "ec823148ebe0a1451b4d0e2c4f55a3b0"
     },
     "R/plots.R": {
       "checksum": "1307093bf21b5bd5f93de81aeaed900d"
@@ -2297,10 +2300,10 @@
       "checksum": "005f29f689bfd71cf1ba52c6ed123572"
     },
     "README.md": {
-      "checksum": "b9f64aeb74c78420c32803354cbbc6b6"
+      "checksum": "f9004ee487d3147956aa4887ea0012a1"
     },
     "www/styles.css": {
-      "checksum": "2bf30bf8bf6c404296f1548ee490254c"
+      "checksum": "d5545ee072a6c86fae2bc70dd0534cb7"
     }
   },
   "users": null
