@@ -2,7 +2,7 @@
 
 Group NequalNp's interactive R Shiny survey analysis.
 
-Public website URL: pending deployment and verification.
+Public website: [Open the STA304 sleep explorer](https://01a21abb-1e06-c986-6458-ff09cf784ea0.share.connect.posit.cloud/).
 
 This repository contains 85 survey responses with direct identifiers removed. Row labels are local response labels, not student IDs.
 Only analytical variables are included. Participation was voluntary; the results are exploratory and do not establish causation.
